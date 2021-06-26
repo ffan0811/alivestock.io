@@ -1,0 +1,16 @@
+{
+    "editor.formatOnSave": true,
+    "[typescriptreact]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#1A1A1A",
+        "titleBar.activeBackground": "#3464e9",
+        "titleBar.inactiveBackground": "#6476a8",
+        "titleBar.border": "#bb5a6f"
+    }
+}
