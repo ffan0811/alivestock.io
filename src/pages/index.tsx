@@ -6,13 +6,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 
-export const getServerSideProps = async ({ locale }: any) => ({
-    props: {
-        ...(await serverSideTranslations(locale, ['common'])),
-    },
-});
-
-export default function Home() {
+function HomePage() {
     const router = useRouter();
     const { t } = useTranslation('common');
 
@@ -28,7 +22,7 @@ export default function Home() {
                 <h1 className={styles.title}>
                     Welcome to <a href="https://nextjs.org">Next.js!{t('h1')}</a>
                 </h1>
-                <Link href="/" locale={router.locale === 'en' ? 'ko' : 'en'}>
+                <Link href="/test" locale={router.locale === 'en' ? 'ko' : 'en'}>
                     <button>{t('title')}</button>
                 </Link>
 
@@ -77,3 +71,11 @@ export default function Home() {
         </div>
     );
 }
+
+export default HomePage;
+
+export const getServerSideProps = async ({ locale }: any) => ({
+    props: {
+        ...(await serverSideTranslations(locale, ['common'])),
+    },
+});
