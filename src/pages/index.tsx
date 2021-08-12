@@ -12,7 +12,7 @@ function HomePage() {
     const { t } = useTranslation('common');
 
     useEffect(() => {
-        throw Error('helllo');
+        throw Error('helllo2');
     }, []);
 
     return (

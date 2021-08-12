@@ -14,6 +14,8 @@ Sentry.init({
     tracesSampleRate: 1.0,
 });
 
+Sentry.setTag('app_name', 'testglider');
+
 function MyApp({ Component, pageProps }: AppProps) {
     return <Component {...pageProps} />;
 }
