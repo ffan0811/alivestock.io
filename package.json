@@ -10,6 +10,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@sentry/react": "^6.11.0",
+    "@sentry/tracing": "^6.11.0",
     "next": "11.0.1",
     "next-i18next": "^8.5.1",
     "react": "17.0.2",
@@ -20,9 +22,8 @@
     "@typescript-eslint/eslint-plugin": "^4.28.0",
     "@typescript-eslint/parser": "^4.28.0",
     "eslint": "^7.2.0",
-    "eslint-config-next": "11.0.1",
-
     "eslint-config-airbnb": "18.2.1",
+    "eslint-config-next": "11.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",

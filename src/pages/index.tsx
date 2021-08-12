@@ -1,14 +1,19 @@
-import Link from 'next/link';
+import { useEffect } from 'react';
+// import Link from 'next/link';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 
 function HomePage() {
-    const router = useRouter();
+    // const router = useRouter();
     const { t } = useTranslation('common');
+
+    useEffect(() => {
+        throw Error('helllo');
+    }, []);
 
     return (
         <div className={styles.container}>
@@ -22,9 +27,9 @@ function HomePage() {
                 <h1 className={styles.title}>
                     Welcome to <a href="https://nextjs.org">Next.js!{t('h1')}</a>
                 </h1>
-                <Link href="/test" locale={router.locale === 'en' ? 'ko' : 'en'}>
+                {/* <Link href="/test" locale={router.locale === 'en' ? 'ko' : 'en'}>
                     <button>{t('title')}</button>
-                </Link>
+                </Link> */}
 
                 <p className={styles.description}>
                     Get started by editing <code className={styles.code}>pages/index.js</code>
